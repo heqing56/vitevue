@@ -42,7 +42,7 @@
 
 ## 自定义配置
 
- [Vite 快速配置参考](https://vitejs.dev/config/).
+ [Vite 快速配置参考](https://cn.vitejs.dev/config/).
 
 ### 依赖下载
 
