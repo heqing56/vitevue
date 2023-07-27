@@ -40,5 +40,26 @@
         ④order:选填，菜单排序，规则默认为10，小于10向前排，相同序号按文件夹先后顺序
         ⑤hide:选填,是否不自动生成路由，默认false,可设为true
 
+## 自定义配置
+
+ [Vite 快速配置参考](https://vitejs.dev/config/).
+
+### 依赖下载
+
+```sh
+yarn
+```
+
+### 运行
+
+```sh
+yarn dev
+```
+
+### 打包
+
+```sh
+yarn build
+```
 
 
