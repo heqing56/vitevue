@@ -2,7 +2,7 @@
   <div class="admin">
     <div class="header">
       <div>用户列表</div>
-      <Buttoncom :loading="false" @click="addFn">新增</Buttoncom>
+      <el-button :loading="false" @click="addFn">新增</el-button>
     </div>
     <el-table :data="tableData" style="width: 100%" class="table" border stripe>
       <el-table-column label="序号" fixed type="index" width="60" />
