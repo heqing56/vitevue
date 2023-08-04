@@ -41,8 +41,10 @@
         ⑤hide:选填,是否不自动生成路由，默认false,可设为true
 
 ## 自定义配置
-
  [Vite 快速配置参考](https://cn.vitejs.dev/config/).
+
+ ## 官方文档
+ [pinia 中文文档](https://pinia.web3doc.top/core-concepts/state.html)
 
 ### 依赖下载
 
