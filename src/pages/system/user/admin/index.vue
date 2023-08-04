@@ -56,6 +56,7 @@
           :types="addOrEdit.types"
           :rows="addOrEdit.rows"
           @returnFn="returnFn"
+          ref="adminref"
         ></adminAdd>
       </div>
     </KeepAlive>
@@ -63,13 +64,14 @@
 </template>
 
 <script setup>
-import { onBeforeMount, reactive, ref } from "vue";
+import { onBeforeMount, reactive } from "vue";
 import { getAdminList } from "@/api/system";
 import adminAdd from "./components/detaol.vue";
 defineOptions({
   name: "admin",
   title: "管理员管理",
 });
+
 /**弹框信息 */
 const addOrEdit = reactive({
   rows: {},

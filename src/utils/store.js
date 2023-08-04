@@ -32,7 +32,6 @@ export const getStore = (params = {}) => {
     let obj = {},
         content;
     obj = window.sessionStorage.getItem(name);
-    console.log(111)
     if (validatenull(obj)) obj = window.localStorage.getItem(name);
     if (validatenull(obj)) return;
     try {
@@ -43,7 +42,6 @@ export const getStore = (params = {}) => {
     if (debug) {
         return obj;
     }
-    console.log(typeof(obj),2332)
     if (obj.dataType == 'string') {
         content = obj.content;
     } else if (obj.dataType == 'number') {
