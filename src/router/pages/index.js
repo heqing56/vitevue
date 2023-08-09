@@ -1,17 +1,19 @@
 let routes = []; //导航树形结构路由
 let routesArr = []; //导航一维数组结构和自定义路由结构
-const obj = import.meta.globEager("@/pages/**/*.vue"); // 查找pages下的所有文件（无论层级）
-Object.keys(obj).reduce((modules, modulePath) => {
+const obj = import.meta.glob("@/pages/**/*.vue"); // 查找pages下的所有文件（无论层级）
+let arr=Object.keys(obj)
+for(const modulePath of arr){
   const moduleName = modulePath.replace(
     /\/src\/pages\/(.*)\/(.*).vue/,
     "$1/$2"
   );
   const noRouter = ["/components", "/noRouter"]; //该数组中的目录或文件，不会自动加入到路由中
   for (const item of noRouter) {
-    if (moduleName.includes(item)) return;
+    if (moduleName.includes(item)) continue;////跳出当前循环到下一次循环
   }
-  const value = obj[modulePath].default;
-  if (value.hide) return; //在页面中添加hide属性表示该页面不自动配置路由
+  let val=await obj[modulePath]()
+  const value = val.default;
+  if (value.hide) continue; //在页面中添加hide属性表示该页面不自动配置路由
   const template = {
     //路由模板
     path: "/" + moduleName,
@@ -25,7 +27,8 @@ Object.keys(obj).reduce((modules, modulePath) => {
     component: () => import(modulePath),
   };
   createNav(moduleName, template);
-}, {});
+}
+
 
 //遍历文件路径 判断是用文件夹还是文件当路由名 创建一维数组的路由信息给routesArr
 function createNav(moduleName, value) {

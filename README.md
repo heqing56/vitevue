@@ -44,7 +44,7 @@
  [Vite 快速配置参考](https://cn.vitejs.dev/config/).
 
  ## 官方文档
- [pinia 中文文档](https://pinia.web3doc.top/core-concepts/state.html)
+ [pinia 中文文档](https://pinia.web3doc.top/)
 
 ### 依赖下载
 

@@ -38,10 +38,10 @@ export default {
 
         })
         onBeforeMount(() => {
-            console.log('onBeforeMount')
+        
         })
         onMounted(() => {
-            console.log('onMounted')
+         
         })
         return {
             ...toRefs(state)

@@ -12,7 +12,6 @@ import Testexpose from './components/Testexpose.vue';
         order:2
     })
     const testexpose=ref(null)
-    console.log(testexpose,'444444')
 </script>
 
 <style>
