@@ -5,23 +5,11 @@
       <div class="desc">最新消息:该项目尚未开发完,请用户们敬请期待吧!</div>
     </div>
     <div class="imgs">
-      <img style="transform: scale(0.8)" src="../../assets/imgs/headerimg.jpg" alt="" />
-      <img
-        style="transform: scale(0.9)"
-        src="../../assets/imgs/headerimg.jpg"
-        alt=""
-      />
-      <img
-       
-        src="../../assets/imgs/headerimg.jpg"
-        alt=""
-      />
-      <img
-        style="transform: scale(0.9)"
-        src="../../assets/imgs/headerimg.jpg"
-        alt=""
-      />
-      <img  style="transform: scale(0.8)" src="../../assets/imgs/headerimg.jpg" alt="" />
+      <img src="../../assets/imgs/headerimg.jpg" alt="" />
+      <img src="../../assets/imgs/headerimg.jpg" alt="" />
+      <img src="../../assets/imgs/headerimg.jpg" alt="" />
+      <img src="../../assets/imgs/headerimg.jpg" alt="" />
+      <img src="../../assets/imgs/headerimg.jpg" alt="" />
     </div>
     <div class="time">
       <div>
@@ -61,9 +49,11 @@ export default {
   font-size: 28px;
   letter-spacing: 1px;
 }
+
 .desc {
   font-size: 14px;
 }
+
 .imgs {
   display: flex;
   align-items: center;
@@ -72,18 +62,46 @@ export default {
   margin: 40px 0;
   transform-style: preserve-3d;
 }
-.imgs > img {
+
+/**弧形的2倍高度 */
+$imgs-before-after-height: 40px;
+
+.imgs::before,
+.imgs::after {
+  content: "";
+  display: block;
+  background: #fff;
+  width: calc(100vw - $nav-width );
+  height: $imgs-before-after-height;
+  position: absolute;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.imgs::before {
+  top: calc($imgs-before-after-height / -2);
+}
+
+.imgs::after {
+  bottom: calc($imgs-before-after-height / -2);
+}
+
+.imgs>img {
   width: calc(100% / 5);
   height: auto;
   display: inline-block;
+  padding: 4px;
+  box-sizing: border-box;
 }
+
 .time {
   display: flex;
   align-items: center;
   /* justify-content: center; */
   text-align: left;
 }
-.time > div {
+
+.time>div {
   margin: 0 8px;
 }
 </style>

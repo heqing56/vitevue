@@ -8,9 +8,6 @@
   </div>
 </template>
 <style scoped lang="scss">
-
-$header-height:55px; //header的高 
-$nav-width:260px; //导航的宽
 .layout{
     width: 100vw;
     padding-top:$header-height;
