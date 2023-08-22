@@ -1,5 +1,5 @@
 <template>
-    <div>123</div>
+    <div class="font-black text-3xl">123</div>
     <div @click="changeNew">{{ name }}</div>
     <div @click="debounceFn">防抖{{ num }}</div>
     <div @click="throttleeFn">节流{{ num }}</div>

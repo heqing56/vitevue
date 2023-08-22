@@ -17,6 +17,7 @@ defineOptions({
 const router = useRouter();
 const logouFn = () => {
   logout().then((res) => {
+    console.log(res)
     if (res.code) {
       clearStore();
       router.push("/login");

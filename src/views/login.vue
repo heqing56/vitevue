@@ -13,7 +13,7 @@
           prop="name"
           :rules="[{ required: true, message: '账号必填' }]"
         >
-          <el-input v-model.number="form.name" type="text" autocomplete="off" />
+          <el-input v-model.number="form.name" type="text" autocomplete="off"  @keyup.enter.native="submitForm(ruleFormRef)"/>
         </el-form-item>
         <el-form-item
           label="密码"
@@ -24,6 +24,7 @@
             v-model.number="form.password"
             type="password"
             autocomplete="off"
+            @keyup.enter.native="submitForm(ruleFormRef)"
           />
         </el-form-item>
         <el-form-item>
