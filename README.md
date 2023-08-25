@@ -49,7 +49,7 @@
  [Router 中文文档](https://router.vuejs.org/zh/)  
  [Vuex 中文文档](https://vuex.vuejs.org/zh/)  
  [pinia 中文文档](https://pinia.web3doc.top/)  
- [tailwindcss 中文文档](https://www.tailwindcss.cn/docs/installation/)  
+ [tailwindcss 中文文档](https://www.tailwindcss.cn/docs/installation)  
 
 ### 依赖下载
 
